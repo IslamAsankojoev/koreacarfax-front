@@ -1,31 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
+@import url('./css/bootstrap.min.css');
+@import url('./css/bootstrap-select.css');
+@import url('./npm/bootstrap@5.2.1/dist/css/bootstrap.min.css');
+@import url('./css/bootstrap-select.css');
 @media screen and (max-width: 768px) {
   .buttom-buttons {
     flex-direction: column;
@@ -119,4 +95,33 @@ body {
 
 .btn.btn-outlined:hover span > svg {
   stroke: rgba(0, 0, 0, 1) !important;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: white;
+    --foreground: black;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 }

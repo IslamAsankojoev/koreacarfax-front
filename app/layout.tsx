@@ -27,11 +27,9 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="icon" type="image/svg+xml" href="img/favicon/safari-pinned-tab.svg" />
         <link href="css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/bootstrap-select.css" />
+        {/* <link rel="stylesheet" href="css/bootstrap.min.css" /> */}
+        {/* <link rel="stylesheet" href="css/bootstrap-select.css" /> */}
         <link href="css/screen.css" rel="stylesheet" />
-        <link href="css/screen-1.css" rel="stylesheet" />
-        <link href="css/screen-2.css" rel="stylesheet" />
         <link href="css/widget-frame.css" rel="stylesheet" />
         <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
@@ -40,16 +38,16 @@ export default function RootLayout({
         <link href="manifest.1.0.json" rel="manifest" />
         <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
 
-        <link rel="stylesheet" href="npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" />
+        {/* <link rel="stylesheet" href="npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" /> */}
         <Script src="npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"></Script>
 
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#000000" />
         <Script src="js/jquery-3.6.4.min.js"></Script>
-        {/* <Script
-          src="npm/jquery.maskedinput%401.4.1/src/jquery.maskedinput.min.js"
+        <Script
+          src="npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
           type="text/javascript"
-        ></Script> */}
+        ></Script>
         {/* <Script src="js/transformations.js"></Script> */}
         <Script src="js/functions4.js"></Script>
         <Script src="js/jquery-3.6.4.min.js" defer></Script>

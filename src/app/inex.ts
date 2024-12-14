@@ -1,0 +1,1 @@
+export { kyApi } from './ky.config'

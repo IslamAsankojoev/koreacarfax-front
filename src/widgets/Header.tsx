@@ -2,23 +2,24 @@ export const Header = () => {
   return (
     <header className="main-header">
       <div className="container">
-        <div className="header-content justify-center md:justify-end">
+        <div className="header-content">
+          <a href="#"></a>
           <nav className="site-nav">
             <ul className="clean-list site-links">
               <li>
-                <a href="report/index.htm" className="text-white">Заказать отчет</a>
+                <a href="https://wa.me/+996553112233" className="text-white">Заказать отчет</a>
               </li>
               <li>
-                <a href="auto/index.htm" className="text-white">Авто под заказ из Кореи</a>
+                <a href="#" className="text-white">Авто под заказ из Кореи</a>
               </li>
               <li>
-                <a href="#ex1" className="text-white">Как скручивают</a>
+                <a href="#" className="text-white">Как скручивают</a>
               </li>
               <li>
-                <a href="#top" className="text-white">Антирейтинг авто</a>
+                <a href="#" className="text-white">Антирейтинг авто</a>
               </li>
               <li>
-                <a href="https://t.me/korea_cars_com" target="_blank" className="text-white">
+                <a href="#" className="text-white">
                   Обсуждение
                 </a>
               </li>
@@ -44,7 +45,7 @@ export const Header = () => {
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item" data-bs-dismiss="offcanvas">
                     <a
-                      href="index.htm"
+                      href="/"
                       className="nav-link"
                       style={{
                         fontSize: '18px',
@@ -55,22 +56,22 @@ export const Header = () => {
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="index.htm" className="nav-link">
+                    <a href="#" className="nav-link">
                       Проверка пробега автомобиля
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="#ex1" className="nav-link">
+                    <a href="#" className="nav-link">
                       Как скручивают
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="#top" className="nav-link">
+                    <a href="#" className="nav-link">
                       Антирейтинг авто
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="https://t.me/korea_cars_com" target="_blank" className="nav-link">
+                    <a href="#" className="nav-link">
                       Обсуждение
                     </a>
                   </li>
@@ -86,22 +87,22 @@ export const Header = () => {
                 </h3>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item">
-                    <a href="report/index.htm" className="nav-link">
+                    <a href="#" className="nav-link">
                       Получить полный отчет по авто
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="report/index.htm#whatСhecked" className="nav-link">
+                    <a href="#" className="nav-link">
                       Что проверяется
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="report/index.htm#howPay" className="nav-link">
+                    <a href="#" className="nav-link">
                       Как оплатить
                     </a>
                   </li>
                   <li className="nav-item">
-                    <a href="report/index.htm#reportExample" className="nav-link">
+                    <a href="#" className="nav-link">
                       Пример отчета
                     </a>
                   </li>
@@ -117,32 +118,32 @@ export const Header = () => {
                 </h3>
                 <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#OurServices" className="nav-link">
+                    <a href="#" className="nav-link">
                       Наши услуги
                     </a>
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#howWork" className="nav-link">
+                    <a href="#" className="nav-link">
                       Процесс покупки
                     </a>
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#calculate" className="nav-link">
+                    <a href="#" className="nav-link">
                       Расчет стоимости
                     </a>
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#howSelect" className="nav-link">
+                    <a href="#" className="nav-link">
                       Бот для подбора
                     </a>
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#advantagesCompany" className="nav-link">
+                    <a href="#" className="nav-link">
                       О нас
                     </a>
                   </li>
                   <li className="nav-item" data-bs-dismiss="offcanvas">
-                    <a href="auto/index.htm#contacts" className="nav-link">
+                    <a href="#" className="nav-link">
                       Контакты
                     </a>
                   </li>
@@ -186,9 +187,9 @@ export const Header = () => {
                   }}
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-miterlimit="10"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeMiterlimit="10"
+                    strokeWidth="2"
                     d="M4 7h22M4 15h22M4 23h22"
                   ></path>
                 </svg>

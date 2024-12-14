@@ -58,7 +58,7 @@ export const FullReport = () => {
             }}
           >
             <a
-              href="report/index.htm#reportExample"
+              href="#"
               className="form-submit btn btn-special"
               style={{
                 height: '30px',
@@ -78,7 +78,7 @@ export const FullReport = () => {
               justifyContent: 'center',
             }}
           >
-            <a href="report/index.htm" className="form-submit btn btn-special">
+            <a href="https://wa.me/+996553112233" className="form-submit btn btn-special">
               Заказать отчет
             </a>
           </div>

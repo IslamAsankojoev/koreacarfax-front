@@ -15,7 +15,7 @@ export const Banner = () => {
         <div className="text align-center">
           <h1>Авто из Кореи</h1>
           <p>Закажи автомобиль из Кореи с гарантией и без рисков</p>
-          <a href="auto/index.htm" className="form-submit btn btn-special">
+          <a href="https://wa.me/+996553112233" className="form-submit btn btn-special">
             Узнать больше о предложении
           </a>
         </div>
