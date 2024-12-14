@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buttom-buttons {
+    flex-direction: column;
+  }
+  .statistics-box.photo-report {
+    padding: 30px 10px 60px 10px; 
+  }
+  .show-report {
+    margin-top: 5px;
+  }
+}
+
+.l-info {
+  font-size: small;
+  line-height: normal;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .l-info {
+    font-size: 15px;
+  } 
+}
+
+.experement {
+    background-color: #36b555;
+    color: white;
+    border-radius: 8px;
+    font-weight: bold;
+    width: 250px;
+    height: 25px;
+}
+
+.experement:hover {
+    background-color:#5bc274;
+}
+
+.experement svg > g {
+    fill: #ffffff;
+}
+
+@media screen and (min-width: 769px) {
+  .site-links li {
+    display: none !important;
+  }
+  .site-links li:nth-child(-n + 3) {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .site-links li {
+    display: none !important;
+  }
+  .site-links li:nth-child(-n + 4) {
+    display: inline-block !important;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .site-links li {
+    display: none !important;
+  }
+  .site-links li:nth-child(-n + 5) {
+    display: inline-block !important;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .site-links li {
+    display: none !important;
+  }
+  .site-links li:nth-child(-n + 7) {
+    display: inline-block !important;
+  }
+}
+.navbar-nav {
+  --bs-nav-link-padding-y: 0.3rem;
+}
+#offcanvasNavbar {
+  overflow: scroll;
+}
+#offcanvasNavbar::-webkit-scrollbar {
+  width: 0;
+}
+
+@media screen and (min-width: 769px) {
+  .only-mobile{
+    display: none;  
+  }
+}
+
+.btn.btn-outlined:hover span > svg {
+  stroke: rgba(0, 0, 0, 1) !important;
+}

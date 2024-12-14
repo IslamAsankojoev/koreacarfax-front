@@ -1,0 +1,19 @@
+<svg width="98" height="72" xmlns="http://www.w3.org/2000/svg">
+ <style type="text/css">.st0{fill:#FFDD2D;}
+	.st1{fill:#FFFFFF;}
+	.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#333333;}
+	.st3{fill:#333333;}
+	.st4{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}</style>
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="74" width="100" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g stroke="null" id="svg_2">
+   <path stroke="null" id="svg_3" d="m14.170281,1.417574l69,0l0,34.715108c0,8.902158 -4.732374,17.109353 -12.443165,21.576978l-22.040288,12.741007l-22.040288,-12.741007c-7.710791,-4.434532 -12.443165,-12.67482 -12.443165,-21.576978l0,-34.715108l-0.033094,0z" class="st0"/>
+   <path stroke="null" id="svg_4" d="m33.099777,19.6852l0,10.788489c1.489209,-1.654676 4.169784,-2.779856 7.214388,-2.779856l3.342446,0l0,12.542446c0,3.342446 -0.893525,6.254676 -2.25036,7.876259l14.494964,0c-1.356835,-1.621583 -2.25036,-4.533813 -2.25036,-7.876259l0,-12.542446l3.342446,0c3.077698,0 5.758273,1.12518 7.214388,2.779856l0,-10.788489l-31.107914,0z" class="st2"/>
+  </g>
+ </g>
+</svg>
