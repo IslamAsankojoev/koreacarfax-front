@@ -1,7 +1,7 @@
 export const Examples = () => {
   return (
     <section className="section section-destination">
-      {/* <a name="ex1"></a> */}
+      <a id="examples" href="#"></a>
       {/* <!-- Title --> */}
       <div className="section-title">
         <div className="container">
@@ -110,17 +110,6 @@ export const Examples = () => {
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div className="links">
-              <a href="https://barnaul.drom.ru/kia/sportage/48915106.html" target="_blank">
-                <span>Объявление на Drom.ru</span>
-              </a>
-              <a
-                href="https://web.archive.org/web/20230206051347/https://barnaul.drom.ru/kia/sportage/48915106.html"
-                target="_blank"
-              >
-                <span>Объявление на Web.archive.org</span>
-              </a>
             </div>
           </div>
         </div>
@@ -274,17 +263,6 @@ export const Examples = () => {
                 </tbody>
               </table>
             </div>
-            <div className="links">
-              <a href="https://vladivostok.drom.ru/kia/sorento/48796702.html" target="_blank">
-                <span>Объявление на Drom.ru</span>
-              </a>
-              <a
-                href="https://web.archive.org/web/20230206051529/https://vladivostok.drom.ru/kia/sorento/48796702.html"
-                target="_blank"
-              >
-                <span>Объявление на Web.archive.org</span>
-              </a>
-            </div>
           </div>
         </div>
         <div className="row text-center article">
@@ -413,20 +391,6 @@ export const Examples = () => {
                 </tbody>
               </table>
             </div>
-            <div className="links">
-              <a
-                href="https://www.avito.ru/krasnodar/avtomobili/kia_morning_2018_2480707782"
-                target="_blank"
-              >
-                <span>Объявление на Avito.ru</span>
-              </a>
-              <a
-                href="https://web.archive.org/web/20230221042522/https://www.avito.ru/krasnodar/avtomobili/kia_morning_2018_2480707782"
-                target="_blank"
-              >
-                <span>Объявление на Web.archive.org</span>
-              </a>
-            </div>
           </div>
         </div>
         <div className="row text-center article">
@@ -549,17 +513,6 @@ export const Examples = () => {
                   </tr>
                 </tbody>
               </table>
-            </div>
-            <div className="links">
-              <a href="https://barnaul.drom.ru/hyundai/palisade/48323661.html" target="_blank">
-                <span>Объявление на Drom.ru</span>
-              </a>
-              <a
-                href="https://web.archive.org/web/20230222115535/https://barnaul.drom.ru/hyundai/palisade/48323661.html"
-                target="_blank"
-              >
-                <span>Объявление на Web.archive.org</span>
-              </a>
             </div>
           </div>
         </div>

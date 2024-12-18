@@ -33,6 +33,7 @@ export const CheckAutoSection = () => {
 
   return (
     <section className="section section-hero">
+      <a id="check"></a>
       <div
         className="hero-box"
         style={{

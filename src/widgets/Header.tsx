@@ -2,24 +2,32 @@ export const Header = () => {
   return (
     <header className="main-header">
       <div className="container">
-        <div className="header-content">
+        <div 
+          className="header-content"
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: '20px 0',
+          }}
+          >
           <a href="#"></a>
           <nav className="site-nav">
             <ul className="clean-list site-links">
               <li>
-                <a href="https://wa.me/+996553112233" className="text-white">Заказать отчет</a>
+                <a href="https://wa.me/+996553112233" target="_blank" className="text-white">Заказать отчет</a>
               </li>
               <li>
-                <a href="#" className="text-white">Авто под заказ из Кореи</a>
+                <a href="https://wa.me/+996553112233" target="_blank" className="text-white">Авто под заказ из Кореи</a>
               </li>
               <li>
-                <a href="#" className="text-white">Как скручивают</a>
+                <a href="#examples" className="text-white">Как скручивают</a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#" className="text-white">Антирейтинг авто</a>
-              </li>
+              </li> */}
               <li>
-                <a href="#" className="text-white">
+                <a href="https://t.me/uclami" className="text-white">
                   Обсуждение
                 </a>
               </li>
@@ -170,6 +178,7 @@ export const Header = () => {
                 textOverflow: 'clip',
                 minWidth: '60px',
                 padding: '3px 0 0',
+                display: 'none'
               }}
             >
               <span
