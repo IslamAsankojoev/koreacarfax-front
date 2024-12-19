@@ -78,7 +78,7 @@ export const FullReport = () => {
               justifyContent: 'center',
             }}
           >
-            <a href="https://wa.me/+996553112233" className="form-submit btn btn-special">
+            <a href="https://wa.me/+821021895448" className="form-submit btn btn-special">
               Заказать отчет
             </a>
           </div>

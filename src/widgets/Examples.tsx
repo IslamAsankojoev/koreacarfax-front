@@ -2,7 +2,6 @@ export const Examples = () => {
   return (
     <section className="section section-destination">
       <a id="examples" href="#"></a>
-      {/* <!-- Title --> */}
       <div className="section-title">
         <div className="container">
           <h2 className="title">Как нечестные продавцы сматывают реальный пробег авто</h2>
@@ -13,7 +12,6 @@ export const Examples = () => {
         </div>
       </div>
 
-      {/* <!-- Content --> */}
       <div className="container text-center">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12">
@@ -24,40 +22,17 @@ export const Examples = () => {
               data-allowfullscreen="true"
             >
               <img src="img/ex1/1.jpg" />
-              <img src="img/ex1/18.jpg" />
-              <img src="img/ex1/19.jpg" />
-              <img src="img/ex1/2.jpg" />
-              <img src="img/ex1/3.jpg" />
-              <img src="img/ex1/4.jpg" />
-              <img src="img/ex1/5.jpg" />
-              <img src="img/ex1/6.jpg" />
-              <img src="img/ex1/7.jpg" />
-              <img src="img/ex1/8.jpg" />
-              <img src="img/ex1/9.jpg" />
-              <img src="img/ex1/10.jpg" />
-              <img src="img/ex1/11.jpg" />
-              <img src="img/ex1/12.jpg" />
-              <img src="img/ex1/13.jpg" />
-              <img src="img/ex1/14.jpg" />
-              <img src="img/ex1/15.jpg" />
-              <img src="img/ex1/16.jpg" />
-              <img src="img/ex1/17.jpg" />
-              <img src="img/ex1/20.jpg" />
-              <img src="img/ex1/21.jpg" />
-              <img src="img/ex1/22.jpg" />
-              <img src="img/ex1/23.jpg" />
-              <img src="img/ex1/24.jpg" />
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-sm-12 description-car">
-            <h2>Kia Sportage, 2018</h2>
+            <h2>TOYOTA RAV-4 2019</h2>
             <div className="table-property">
               <table>
                 <tbody>
                   <tr>
                     <th>Двигатель</th>
                     <td>
-                      <span>дизель, 1.7 л</span>
+                      <span>дизель, 2.5 л</span>
                     </td>
                   </tr>
                   <tr>
@@ -85,7 +60,8 @@ export const Examples = () => {
                   </tr>
                   <tr>
                     <th>Цвет</th>
-                    <td>белый</td>
+                    <td>Белый жемчуг
+                    </td>
                   </tr>
                   <tr>
                     <th>Пробег, км</th>
@@ -96,7 +72,7 @@ export const Examples = () => {
                         }}
                       >
                         {' '}
-                        44 000 (без пробега по РФ){' '}
+                        60 000
                       </span>
                     </td>
                   </tr>

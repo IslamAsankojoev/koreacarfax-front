@@ -1,4 +1,5 @@
 import { kyApi } from "@/app/ky.config"
+import { Media } from "./media"
 
 export interface ICar {
   id: number
@@ -12,13 +13,15 @@ export interface ICar {
   createdAt: string
   updatedAt: string
   publishedAt: string
+  images?: Media[]
+  car_status: string
 }
 
 export const CarService = {
   async getCars(search?: string) {
     const searchString = search ? search : 'notfound'
     try {
-      return kyApi.get(`cars?filters[vin][$eq]=${searchString}`).json()
+      return kyApi.get(`cars?populate=*&filters[vin][$eq]=${searchString}`).json()
     } catch (error) {
       console.error('Error fetching cars:', error)
     }
