@@ -1,7 +1,6 @@
 'use client'
 
 import { CarService, ICar } from '@/services/cars.service'
-import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 import { Open_Sans } from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -17,6 +16,7 @@ export const CheckAutoSection = () => {
   const [vinValue, setVinValue] = useState('')
   const [car, setCar] = useState<ICar | null>(null)
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
+  const [currentSlide, setCurrentSlide] = useState(1)
 
   const handleSearch = async () => {
     if (!vinValue) {
@@ -25,8 +25,16 @@ export const CheckAutoSection = () => {
 
     const { data } = (await CarService.getCars(vinValue)) as any
     setCar(data[0])
+    emblaApi?.reInit()
+    setCurrentSlide(1)
     if (!data[0]) {
-      alert('Нет данных по автомобилю!')
+      alert(`Информация временно недоступна. 
+Ваш запрос обрабатывается. 
+Данные будут доступны в течение 24 часов.
+
+Для помощи обратитесь по телефону:
++82 10-2189-5448
+`)
     }
   }
 
@@ -36,7 +44,14 @@ export const CheckAutoSection = () => {
 
   useEffect(() => {
     if (emblaApi) {
-      console.log(emblaApi.slideNodes()) // Access API
+      const onSelect = () => {
+        setCurrentSlide(emblaApi.selectedScrollSnap() + 1);
+      };
+  
+      emblaApi.on('select', onSelect);
+      return () => {
+        emblaApi.off('select', onSelect);
+      };
     }
   }, [emblaApi])
 
@@ -94,11 +109,28 @@ export const CheckAutoSection = () => {
             >
               <div id="toast">Ссылка скопирована!</div>
               <div className="statistics-box">
-                <div className="show-damage">
+                <div className="show-damage !hidden md:!block">
                   {!!car?.car_status && (
                     <p
+                      className={`${opensans.className}`}
                       style={{
                         color: 'red',
+                        fontWeight: '900',
+                        fontSize: '1.3rem',
+                      }}
+                    >
+                      {car?.car_status}
+                    </p>
+                  )}
+                </div>
+                <div className="statistics-item !block md:!hidden">
+                  {!!car?.car_status && (
+                    <p
+                      className={`${opensans.className}`}
+                      style={{
+                        color: 'red',
+                        fontWeight: '900',
+                        fontSize: '1.3rem',
                       }}
                     >
                       {car?.car_status}
@@ -120,20 +152,24 @@ export const CheckAutoSection = () => {
                     <div className="embla" ref={emblaRef}>
                       <div className="embla__container">
                         {car?.images?.map((image, index) => (
-                          <div className="embla__slide">
+                          <div className="embla__slide relative h-60 w-auto rounded-md overflow-hidden" key={index}>
                             <Image
                               key={index}
                               src={image.url}
-                              width={image.width}
-                              height={image.height}
+                              fill
                               alt={image.alternativeText}
-                              className='rounded-md'
+                              objectFit='contain'
+                              className='absolute'
                             />
                           </div>
                         ))}
                       </div>
+                      <p className="embla__pagination">
+                      {currentSlide} из {car?.images?.length}
+                      </p>
                     </div>
                   </span>
+                  
                   <p className="title">Фото</p>
                 </div>
                 <div className="statistics-item">
@@ -142,33 +178,33 @@ export const CheckAutoSection = () => {
                   </span>
                   <p className="title">Наименование модели</p>
                 </div>
-                <div className="statistics-item">
+                {car?.color && <div className="statistics-item">
                   <span className={`value ${opensans.className}`} id="M_COLOR_ENG">
                     {' '}
                     {car?.color}
                   </span>
                   <p className="title">Цвет автомобиля</p>
-                </div>
-                <div className="statistics-item">
+                </div>}
+                {car?.korea_export_date && <div className="statistics-item">
                   <span className={`value ${opensans.className}`} id="M_EXPORT_PERMIT_DATE">
                     {car?.korea_export_date}
                   </span>
                   <p className="title">Дата вывоза из Кореи</p>
-                </div>
+                </div>}
 
-                <div className="statistics-item">
+                {car?.start_date && <div className="statistics-item">
                   <span className={`value ${opensans.className}`} id="M_DATE_OF_FIRST_REGISTRATION">
                     {car?.start_date}
                   </span>
                   <p className="title">Начало эксплуатации</p>
-                </div>
+                </div>}
 
-                <div className="statistics-item">
+                {car?.probeg && <div className="statistics-item">
                   <span className={`value ${opensans.className}`} id="M_FINAL_DRIVE_DISTANCE">
                     {car?.probeg} км
                   </span>
                   <p className="title">Пробег при вывозе</p>
-                </div>
+                </div>}
               </div>
             </motion.div>
           )}
