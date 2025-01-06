@@ -21,7 +21,7 @@ export const Examples = () => {
               data-nav="thumbs"
               data-allowfullscreen="true"
             >
-              <img src="img/ex1/1.jpg" />
+              <img src="img/ex1/1.jpg" alt="car" />
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-sm-12 description-car">
