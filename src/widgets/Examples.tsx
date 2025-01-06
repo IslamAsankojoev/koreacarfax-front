@@ -160,21 +160,21 @@ export const Examples = () => {
               data-nav="thumbs"
               data-allowfullscreen="true"
             >
-              <img src="img/ex2/1.jpg" />
-              <img src="img/ex2/2.jpg" />
-              <img src="img/ex2/3.jpg" />
-              <img src="img/ex2/4.jpg" />
-              <img src="img/ex2/5.jpg" />
-              <img src="img/ex2/6.jpg" />
-              <img src="img/ex2/7.jpg" />
-              <img src="img/ex2/8.jpg" />
-              <img src="img/ex2/9.jpg" />
-              <img src="img/ex2/10.jpg" />
-              <img src="img/ex2/11.jpg" />
-              <img src="img/ex2/12.jpg" />
-              <img src="img/ex2/13.jpg" />
-              <img src="img/ex2/14.jpg" />
-              <img src="img/ex2/15.jpg" />
+              <img src="img/ex2/1.jpg" alt='example-car' />
+              <img src="img/ex2/2.jpg" alt='example-car' />
+              <img src="img/ex2/3.jpg" alt='example-car' />
+              <img src="img/ex2/4.jpg" alt='example-car' />
+              <img src="img/ex2/5.jpg" alt='example-car' />
+              <img src="img/ex2/6.jpg" alt='example-car' />
+              <img src="img/ex2/7.jpg" alt='example-car' />
+              <img src="img/ex2/8.jpg" alt='example-car' />
+              <img src="img/ex2/9.jpg" alt='example-car' />
+              <img src="img/ex2/10.jpg" alt='example-car' />
+              <img src="img/ex2/11.jpg" alt='example-car' />
+              <img src="img/ex2/12.jpg" alt='example-car' />
+              <img src="img/ex2/13.jpg" alt='example-car' />
+              <img src="img/ex2/14.jpg" alt='example-car' />
+              <img src="img/ex2/15.jpg" alt='example-car' />
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-sm-12 description-car">
@@ -295,14 +295,14 @@ export const Examples = () => {
               data-nav="thumbs"
               data-allowfullscreen="true"
             >
-              <img src="img/ex3/1.jpg" />
-              <img src="img/ex3/2.jpg" />
-              <img src="img/ex3/3.jpg" />
-              <img src="img/ex3/4.jpg" />
-              <img src="img/ex3/5.jpg" />
-              <img src="img/ex3/6.jpg" />
-              <img src="img/ex3/7.jpg" />
-              <img src="img/ex3/8.jpg" />
+              <img src="img/ex3/1.jpg" alt="example-car"/>
+              <img src="img/ex3/2.jpg" alt="example-car"/>
+              <img src="img/ex3/3.jpg" alt="example-car"/>
+              <img src="img/ex3/4.jpg" alt="example-car"/>
+              <img src="img/ex3/5.jpg" alt="example-car"/>
+              <img src="img/ex3/6.jpg" alt="example-car"/>
+              <img src="img/ex3/7.jpg" alt="example-car"/>
+              <img src="img/ex3/8.jpg" alt="example-car"/>
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-sm-12 description-car">
@@ -421,15 +421,15 @@ export const Examples = () => {
               data-nav="thumbs"
               data-allowfullscreen="true"
             >
-              <img src="img/ex4/1.jpg" />
-              <img src="img/ex4/2.jpg" />
-              <img src="img/ex4/3.jpg" />
-              <img src="img/ex4/4.jpg" />
-              <img src="img/ex4/5.jpg" />
-              <img src="img/ex4/6.jpg" />
-              <img src="img/ex4/7.jpg" />
-              <img src="img/ex4/8.jpg" />
-              <img src="img/ex4/9.jpg" />
+              <img src="img/ex4/1.jpg" alt="example-car"/>
+              <img src="img/ex4/2.jpg" alt="example-car"/>
+              <img src="img/ex4/3.jpg" alt="example-car"/>
+              <img src="img/ex4/4.jpg" alt="example-car"/>
+              <img src="img/ex4/5.jpg" alt="example-car"/>
+              <img src="img/ex4/6.jpg" alt="example-car"/>
+              <img src="img/ex4/7.jpg" alt="example-car"/>
+              <img src="img/ex4/8.jpg" alt="example-car"/>
+              <img src="img/ex4/9.jpg" alt="example-car"/>
             </div>
           </div>
           <div className="col-lg-12 col-md-12 col-sm-12 description-car">

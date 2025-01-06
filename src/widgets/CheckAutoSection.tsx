@@ -6,6 +6,7 @@ import { Open_Sans } from 'next/font/google'
 import { AnimatePresence, motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
+import { JsonLd } from './JsonLd'
 
 const opensans = Open_Sans({
   subsets: ['latin', 'cyrillic', 'cyrillic-ext'],
@@ -23,7 +24,7 @@ export const CheckAutoSection = () => {
       return
     }
 
-    const { data } = (await CarService.getCars(vinValue)) as any
+    const { data } = (await CarService.searchCar(vinValue)) as any
     setCar(data[0])
     emblaApi?.reInit()
     setCurrentSlide(1)
@@ -45,18 +46,26 @@ export const CheckAutoSection = () => {
   useEffect(() => {
     if (emblaApi) {
       const onSelect = () => {
-        setCurrentSlide(emblaApi.selectedScrollSnap() + 1);
-      };
-  
-      emblaApi.on('select', onSelect);
+        setCurrentSlide(emblaApi.selectedScrollSnap() + 1)
+      }
+
+      emblaApi.on('select', onSelect)
       return () => {
-        emblaApi.off('select', onSelect);
-      };
+        emblaApi.off('select', onSelect)
+      }
     }
   }, [emblaApi])
 
   return (
     <section className="section section-hero">
+      <JsonLd
+        jsonLdSchema={{
+          name: 'Проверка пробега авто из Кореи',
+          type: 'WebPage',
+          description:
+            'Проверьте пробег, ДТП, затопление и дату выпуска автомобиля из Кореи по VIN. На нашем сайте вы быстро узнаете реальный пробег и историю авто, чтобы сделать правильный выбор.',
+        }}
+      />
       <a id="check"></a>
       <div
         className="hero-box"
@@ -152,24 +161,27 @@ export const CheckAutoSection = () => {
                     <div className="embla" ref={emblaRef}>
                       <div className="embla__container">
                         {car?.images?.map((image, index) => (
-                          <div className="embla__slide relative h-60 w-auto rounded-md overflow-hidden" key={index}>
+                          <div
+                            className="embla__slide relative h-60 w-auto rounded-md overflow-hidden"
+                            key={index}
+                          >
                             <Image
                               key={index}
                               src={image.url}
                               fill
                               alt={image.alternativeText}
-                              objectFit='contain'
-                              className='absolute'
+                              objectFit="contain"
+                              className="absolute"
                             />
                           </div>
                         ))}
                       </div>
                       <p className="embla__pagination">
-                      {currentSlide} из {car?.images?.length}
+                        {currentSlide} из {car?.images?.length}
                       </p>
                     </div>
                   </span>
-                  
+
                   <p className="title">Фото</p>
                 </div>
                 <div className="statistics-item">
@@ -178,33 +190,44 @@ export const CheckAutoSection = () => {
                   </span>
                   <p className="title">Наименование модели</p>
                 </div>
-                {car?.color && <div className="statistics-item">
-                  <span className={`value ${opensans.className}`} id="M_COLOR_ENG">
-                    {' '}
-                    {car?.color}
-                  </span>
-                  <p className="title">Цвет автомобиля</p>
-                </div>}
-                {car?.korea_export_date && <div className="statistics-item">
-                  <span className={`value ${opensans.className}`} id="M_EXPORT_PERMIT_DATE">
-                    {car?.korea_export_date}
-                  </span>
-                  <p className="title">Дата вывоза из Кореи</p>
-                </div>}
+                {car?.color && (
+                  <div className="statistics-item">
+                    <span className={`value ${opensans.className}`} id="M_COLOR_ENG">
+                      {' '}
+                      {car?.color}
+                    </span>
+                    <p className="title">Цвет автомобиля</p>
+                  </div>
+                )}
+                {car?.korea_export_date && (
+                  <div className="statistics-item">
+                    <span className={`value ${opensans.className}`} id="M_EXPORT_PERMIT_DATE">
+                      {car?.korea_export_date}
+                    </span>
+                    <p className="title">Дата вывоза из Кореи</p>
+                  </div>
+                )}
 
-                {car?.start_date && <div className="statistics-item">
-                  <span className={`value ${opensans.className}`} id="M_DATE_OF_FIRST_REGISTRATION">
-                    {car?.start_date}
-                  </span>
-                  <p className="title">Начало эксплуатации</p>
-                </div>}
+                {car?.start_date && (
+                  <div className="statistics-item">
+                    <span
+                      className={`value ${opensans.className}`}
+                      id="M_DATE_OF_FIRST_REGISTRATION"
+                    >
+                      {car?.start_date}
+                    </span>
+                    <p className="title">Начало эксплуатации</p>
+                  </div>
+                )}
 
-                {car?.probeg && <div className="statistics-item">
-                  <span className={`value ${opensans.className}`} id="M_FINAL_DRIVE_DISTANCE">
-                    {car?.probeg} км
-                  </span>
-                  <p className="title">Пробег при вывозе</p>
-                </div>}
+                {car?.probeg && (
+                  <div className="statistics-item">
+                    <span className={`value ${opensans.className}`} id="M_FINAL_DRIVE_DISTANCE">
+                      {car?.probeg} км
+                    </span>
+                    <p className="title">Пробег при вывозе</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           )}

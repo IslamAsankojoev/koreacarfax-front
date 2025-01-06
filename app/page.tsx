@@ -1,12 +1,17 @@
-import { Footer, Header, CheckAutoSection, FullReport, Banner, Examples } from "@/widgets";
+import { Footer, Header, CheckAutoSection, FullReport, Banner, Examples } from '@/widgets'
+import Link from 'next/link'
 
 export default function Home() {
-  return <>
-  <Header />
-  <CheckAutoSection />
-  <FullReport />
-  <Banner />
-  <Examples />
-  {/* <Footer /> */}
-  </>
+  return (
+    <>
+      <Link href="/cars" className="invisible h-0">
+        Все автомобили
+      </Link>
+      <CheckAutoSection />
+      <FullReport />
+      <Banner />
+      <Examples />
+      {/* <Footer /> */}
+    </>
+  )
 }

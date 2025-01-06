@@ -13,7 +13,7 @@ export const Banner = () => {
     >
       <div className="container">
         <div className="text align-center">
-          <h1>Авто из Кореи</h1>
+          <h2>Авто из Кореи</h2>
           <p>Закажи автомобиль из Кореи с гарантией и без рисков</p>
           <a href="https://wa.me/+821021895448" className="form-submit btn btn-special">
             Узнать больше о предложении

@@ -1,11 +1,16 @@
-import type { Metadata } from 'next'
 import './globals.css'
 import Script from 'next/script'
+import { generateMeta } from '@/shared/lib/generateMeta'
+import { Header } from '@/widgets'
 
-export const metadata: Metadata = {
-  title: 'Проверка пробега авто из Кореи',
-  description: 'Проверьте реальный пробег, ДТП, затопление, дату производства выпуска изготовления, автомобиля привезенного из Кореи по вин номеру (VIN). Если вы хотите Проверить авто из Кореи по вин коду, можете сделать это на нашем сайте. Быстрая Проверка авто из Южной Кореи по VIN-номеру. Если пробег скручен или смотан, с помощью нашего сервиса вы сможете узнать реальный пробег и сделать правильный выбор. ',
-  keywords: 'Пробег,Автомобить,Скручен,Реальный,Вин,Номер,Смотан,Проверить,Пробить,Узнать,Затопление,Наводнение,Утопленик,Аварии,ДТП,Дата выпуска,Дата производства,Дата изготовления,Проходной,Непроходной,Расчеты,Угон,Корея,Ввезен,Привезенный,car365,carstat,аукцион,автотека,карстат,кар365,корея карс',
+export function generateMetadata() {
+  return generateMeta({
+    title: 'Проверка пробега авто из Кореи',
+    description:
+      'Проверьте пробег, ДТП, затопление и дату выпуска автомобиля из Кореи по VIN. На нашем сайте вы быстро узнаете реальный пробег и историю авто, чтобы сделать правильный выбор.',
+    keywords:
+      'Пробег,Автомобить,Скручен,Реальный,Вин,Номер,Смотан,Проверить,Пробить,Узнать,Затопление,Наводнение,Утопленик,Аварии,ДТП,Дата выпуска,Дата производства,Дата изготовления,Проходной,Непроходной,Расчеты,Угон,Корея,Ввезен,Привезенный,car365,carstat,аукцион,автотека,карстат,кар365,корея карс',
+  })
 }
 
 export default function RootLayout({
@@ -16,7 +21,7 @@ export default function RootLayout({
   return (
     <html className="translated-ltr">
       <head>
-        <title>Первый в  Сервис проверки пробега, ДТП автомобилей из Кореи</title>
+        <title>Первый в Сервис проверки пробега, ДТП автомобилей из Кореи</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <link rel="icon" type="image/svg+xml" href="img/favicon/safari-pinned-tab.svg" />
         <link href="css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet" />
@@ -49,6 +54,7 @@ export default function RootLayout({
         <Script src="ajax/libs/fotorama/4.6.4/fotorama.js"></Script>
       </head>
       <body className="home dom-ready" id="page">
+        <Header />
         {children}
       </body>
     </html>
