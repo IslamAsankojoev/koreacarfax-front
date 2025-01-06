@@ -1,10 +1,23 @@
 import { CarService } from '@/services/cars.service'
+import { generateMeta } from '@/shared/lib/generateMeta'
 import { JsonLd } from '@/widgets/JsonLd'
 
 interface PageProps {
   params: {
     id: string
   }
+}
+
+export async function generateMetadata(props: PageProps) {
+  const res = await CarService.getCarById(props.params.id)
+  const car = res?.data || null
+  return generateMeta({
+    title: 'Проверка пробега авто из Кореи' + (car ? ` ${car.model_name} - ${car.vin}` : ''),
+    description:
+      'Проверьте пробег, ДТП, затопление и дату выпуска авто из Кореи по VIN. На нашем сайте вы узнаете реальный пробег и историю, чтобы сделать правильный выбор.' + (car ? ` ${car.model_name} - ${car.vin}` : ''),
+    keywords:
+      'Пробег,Автомобить,Скручен,Реальный,Вин,Номер,Смотан,Проверить,Пробить,Узнать,Затопление,Наводнение,Утопленик,Аварии,ДТП,Дата выпуска,Дата производства,Дата изготовления,Проходной,Непроходной,Расчеты,Угон,Корея,Ввезен,Привезенный,car365,carstat,аукцион,автотека,карстат,кар365,корея карс',
+  })
 }
 
 export default async function Page({ params }: PageProps) {
