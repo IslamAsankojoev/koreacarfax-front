@@ -1,5 +1,6 @@
 import { CarService } from '@/services/cars.service'
 import { generateMeta } from '@/shared/lib/generateMeta'
+import { Header } from '@/widgets'
 import { JsonLd } from '@/widgets/JsonLd'
 
 interface PageProps {
@@ -27,6 +28,7 @@ export default async function Page({ params }: PageProps) {
   if (!car) {
     return <div>Автомобиль не найден</div>
   }
+
   return (
     <>
       <section className="section section-hero">
@@ -44,7 +46,7 @@ export default async function Page({ params }: PageProps) {
           style={{
             position: 'relative',
             backgroundImage: 'url(/img/hero-background.jpg)',
-            backgroundPosition: '50% 40%',
+            backgroundPosition: '50% 60%',
             padding: '100px 0',
           }}
         >
@@ -89,7 +91,7 @@ export default async function Page({ params }: PageProps) {
             </table>
             <div style={{ marginTop: '10px' }}>
               <a
-                href="https://wa.me/+821021895448"
+                href="https://wa.me/+79191085259"
                 style={{
                   backgroundColor: '#36b555',
                   textDecoration: 'none',

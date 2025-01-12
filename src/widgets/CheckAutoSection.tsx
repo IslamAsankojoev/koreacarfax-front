@@ -34,7 +34,7 @@ export const CheckAutoSection = () => {
 Данные будут доступны в течение 24 часов.
 
 Для помощи обратитесь по телефону:
-+82 10-2189-5448
++79 19-108-5259
 `)
     }
   }
@@ -148,7 +148,7 @@ export const CheckAutoSection = () => {
                 </div>
                 <div className="buttom-buttons">
                   <a
-                    href={`https://wa.me/+821021895448?text=Здравствуйте,%20я%20по%20поводу%20машины%20-%20${car?.model_name}%20%0AВин код - %20${car?.vin}`}
+                    href={`https://wa.me/+79191085259?text=Здравствуйте,%20я%20по%20поводу%20машины%20-%20${car?.model_name}%20%0AВин код - %20${car?.vin}`}
                     className="show-report experement"
                     target="_blank"
                   >

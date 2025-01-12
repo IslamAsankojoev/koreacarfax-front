@@ -9,10 +9,10 @@ export const Header = () => {
           <nav className="site-nav">
             <ul className="clean-list site-links">
               <li>
-                <a href="https://wa.me/+821021895448" target="_blank" className="text-white">Заказать отчет</a>
+                <a href="https://wa.me/+79191085259" target="_blank" className="text-white">Заказать отчет</a>
               </li>
               <li>
-                <a href="https://wa.me/+821021895448" target="_blank" className="text-white">Авто под заказ из Кореи</a>
+                <a href="https://wa.me/+79191085259" target="_blank" className="text-white">Авто под заказ из Кореи</a>
               </li>
               <li>
                 <a href="#examples" className="text-white">Как скручивают</a>

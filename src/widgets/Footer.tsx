@@ -82,7 +82,7 @@ export const Footer = () => {
               }}
             >
               <h5>Офис в Корее</h5>
-              {/* <!--<p style="margin-bottom: 0;"><a href="tel:821075572851">+82-10-7557-2851</a></p>--> */}
+              {/* <!--<p style="margin-bottom: 0;"><a href="tel:79191085259">+79 19-108-5259</a></p>--> */}
               <p
                 style={{
                   marginBottom: '0',
@@ -105,7 +105,7 @@ export const Footer = () => {
               >
                 <a
                   target="_blank"
-                  href="https://wa.me/+821075572851"
+                  href="https://wa.me/+79191085259"
                   style={{
                     marginRight: '15px',
                   }}

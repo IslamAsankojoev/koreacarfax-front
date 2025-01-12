@@ -2,7 +2,7 @@ import { CarService } from '@/services/cars.service';
 import type { MetadataRoute } from 'next';
 
 async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const origin = process.env.NEXTAUTH_URL || 'https://your-default-domain.com';
+  const origin = process.env.NEXTAUTH_URL
 
   const carsResponse = await CarService.getCars().catch(() => ({ data: [] }));
   const cars = carsResponse?.data || [];

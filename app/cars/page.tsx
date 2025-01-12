@@ -22,7 +22,7 @@ export default async function Page() {
           style={{
             position: 'relative',
             backgroundImage: 'url(/img/hero-background.jpg)',
-            backgroundPosition: '50% 40%',
+            backgroundPosition: '50% 60%',
             padding: '100px 0',
           }}
         >
@@ -44,7 +44,7 @@ export default async function Page() {
           }}
         >
           {cars?.data.map((car) => (
-            <Link href={`/cars/${car.documentId}`}>
+            <Link href={`/cars/${car.documentId}`} key={car.documentId}>
               <div
                 style={{
                   display: 'flex',
@@ -54,17 +54,24 @@ export default async function Page() {
                 className="description-car"
                 key={car.id}
               >
-                <img
+                <div className="relative" style={{
+                  height: '300px',
+                  width: '100%',
+                }}>
+                <Image
                   src={
                     car?.images && car?.images?.length > 0
                       ? car?.images[0].url
                       : '/images/car-placeholder.png'
                   }
+                  fill
                   alt={car.model_name}
-                  width={300}
-                  height={200}
-                  className="rounded-md !object-cover"
+                  className="rounded-md"
+                  style={{
+                    objectFit: 'cover',
+                  }}
                 />
+                </div>
 
                 <div className="table-property">
                   <h2>{car.model_name}</h2>
