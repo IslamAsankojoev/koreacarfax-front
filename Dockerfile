@@ -6,12 +6,15 @@ RUN npm install --legacy-peer-deps
 FROM node:18 AS builder
 # Добавляем возможность передавать переменную окружения BACKEND_API_URL
 ARG BACKEND_API_URL
+ARG NEXTAUTH_URL
 ENV BACKEND_API_URL=${BACKEND_API_URL}
+ENV NEXTAUTH_URL=${NEXTAUTH_URL}
 WORKDIR /app
 COPY . .
 COPY --from=dependencies /app/node_modules ./node_modules
 # Выводим значение BACKEND_API_URL для проверки
 RUN echo "BACKEND_API_URL: ${BACKEND_API_URL}"
+RUN echo "NEXTAUTH_URL: ${NEXTAUTH_URL}"
 RUN npm run build
 
 FROM node:18 AS runner
