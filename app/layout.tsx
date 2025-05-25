@@ -1,7 +1,7 @@
-import './globals.css'
 import Script from 'next/script'
 import { generateMeta } from '@/shared/lib/generateMeta'
 import { Header } from '@/widgets'
+import './globals.css'
 
 export function generateMetadata() {
   return generateMeta({

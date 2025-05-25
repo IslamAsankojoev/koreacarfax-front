@@ -2,6 +2,14 @@ import { CarService } from '@/services/cars.service'
 import { JsonLd } from '@/widgets/JsonLd'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
 
 export default async function Page() {
   const cars = await CarService.getCars()

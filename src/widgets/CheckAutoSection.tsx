@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import useEmblaCarousel from 'embla-carousel-react'
 import Image from 'next/image'
 import { JsonLd } from './JsonLd'
+import { CarSlider } from './CarSlider'
 
 const opensans = Open_Sans({
   subsets: ['latin', 'cyrillic', 'cyrillic-ext'],
@@ -16,8 +17,6 @@ const opensans = Open_Sans({
 export const CheckAutoSection = () => {
   const [vinValue, setVinValue] = useState('')
   const [car, setCar] = useState<ICar | null>(null)
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false })
-  const [currentSlide, setCurrentSlide] = useState(1)
 
   const handleSearch = async () => {
     if (!vinValue) {
@@ -26,10 +25,9 @@ export const CheckAutoSection = () => {
 
     const { data } = (await CarService.searchCar(vinValue)) as any
     setCar(data[0])
-    emblaApi?.reInit()
-    setCurrentSlide(1)
     if (!data[0]) {
-      alert(`Информация временно недоступна. 
+      alert(
+`Информация временно недоступна. 
 Ваш запрос обрабатывается. 
 Данные будут доступны в течение 24 часов.
 
@@ -42,19 +40,6 @@ export const CheckAutoSection = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setVinValue(e.target.value)
   }
-
-  useEffect(() => {
-    if (emblaApi) {
-      const onSelect = () => {
-        setCurrentSlide(emblaApi.selectedScrollSnap() + 1)
-      }
-
-      emblaApi.on('select', onSelect)
-      return () => {
-        emblaApi.off('select', onSelect)
-      }
-    }
-  }, [emblaApi])
 
   return (
     <section className="section section-hero">
@@ -158,28 +143,7 @@ export const CheckAutoSection = () => {
 
                 <div className="statistics-item">
                   <span className={`value ${opensans.className}`} id="M_CHASSIS_NO">
-                    <div className="embla" ref={emblaRef}>
-                      <div className="embla__container">
-                        {car?.images?.map((image, index) => (
-                          <div
-                            className="embla__slide relative h-60 w-auto rounded-md overflow-hidden"
-                            key={index}
-                          >
-                            <Image
-                              key={index}
-                              src={image.url}
-                              fill
-                              alt={image.alternativeText}
-                              objectFit="contain"
-                              className="absolute"
-                            />
-                          </div>
-                        ))}
-                      </div>
-                      <p className="embla__pagination">
-                        {currentSlide} из {car?.images?.length}
-                      </p>
-                    </div>
+                    <CarSlider car={car} />
                   </span>
 
                   <p className="title">Фото</p>
