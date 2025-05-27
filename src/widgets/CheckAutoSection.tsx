@@ -14,9 +14,13 @@ const opensans = Open_Sans({
   weight: ['300', '400', '500', '600', '700'],
 })
 
-export const CheckAutoSection = () => {
+interface CheckAutoSectionProps {
+  initCar?: ICar | null
+}
+
+export const CheckAutoSection = ({ initCar }: CheckAutoSectionProps) => {
   const [vinValue, setVinValue] = useState('')
-  const [car, setCar] = useState<ICar | null>(null)
+  const [car, setCar] = useState<ICar | null>(initCar || null)
 
   const handleSearch = async () => {
     if (!vinValue) {
@@ -24,7 +28,7 @@ export const CheckAutoSection = () => {
     }
 
     const { data } = (await CarService.searchCar(vinValue)) as any
-    setCar(data[0])
+    
     if (!data[0]) {
       alert(
 `Информация временно недоступна. 
@@ -34,6 +38,8 @@ export const CheckAutoSection = () => {
 Для помощи обратитесь по телефону:
 +79 19-108-5259
 `)
+    } else if (data.length > 0) {
+      setCar(data[0])
     }
   }
 
