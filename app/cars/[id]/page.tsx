@@ -106,7 +106,7 @@ export default async function Page({ params }: PageProps) {
             </div>
             <div className="buttom-buttons">
               <a
-                href={`https://wa.me/+79191085259?text=Здравствуйте,%20я%20по%20поводу%20машины%20-%20${car?.model_name}%20%0AВин код - %20${car?.vin}`}
+                href={`https://wa.me/+123456789?text=Здравствуйте,%20я%20по%20поводу%20машины%20-%20${car?.model_name}%20%0AВин код - %20${car?.vin}`}
                 className="show-report experement"
                 target="_blank"
               >
